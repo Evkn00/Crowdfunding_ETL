@@ -19,9 +19,19 @@ CREATE TABLE "subcategory" (
      )
 );
 
+CREATE TABLE "contact" (
+    "contact_id" integer   NOT NULL,
+    "first_name" varchar(30)   NOT NULL,
+    "last_name" varchar(30)   NOT NULL,
+    "email" varchar(50)   NOT NULL,
+    CONSTRAINT "pk_contact" PRIMARY KEY (
+        "contact_id"
+     )
+);
+
 CREATE TABLE "campaign" (
     "cf_id" varchar   NOT NULL,
-    "contact_id" varchar   NOT NULL,
+    "contact_id" integer   NOT NULL,
     "company_name" varchar(50)   NOT NULL,
     "description" varchar   NOT NULL,
     "goal" float   NOT NULL,
@@ -36,16 +46,6 @@ CREATE TABLE "campaign" (
     "subcategory_id" varchar   NOT NULL,
     CONSTRAINT "pk_campaign" PRIMARY KEY (
         "cf_id"
-     )
-);
-
-CREATE TABLE "contact" (
-    "contact_id" varchar(30)   NOT NULL,
-    "first_name" varchar(30)   NOT NULL,
-    "last_name" varchar(30)   NOT NULL,
-    "email" varchar(50)   NOT NULL,
-    CONSTRAINT "pk_contact" PRIMARY KEY (
-        "contact_id"
      )
 );
 

@@ -4,7 +4,7 @@
 
 
 CREATE TABLE "category" (
-    "category_id" varchar(5)   NOT NULL,
+    "category_id" varchar(10)   NOT NULL,
     "category" varchar(30)   NOT NULL,
     CONSTRAINT "pk_category" PRIMARY KEY (
         "category_id"
@@ -12,7 +12,7 @@ CREATE TABLE "category" (
 );
 
 CREATE TABLE "subcategory" (
-    "subcategory_id" varchar(5)   NOT NULL,
+    "subcategory_id" varchar(10)   NOT NULL,
     "subcategory" varchar(30)   NOT NULL,
     CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_id"
